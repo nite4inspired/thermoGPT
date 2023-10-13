@@ -1,0 +1,171 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\pagestyle{empty}
+\title{Chapter 1 - Energy in Thermal Physics}
+\date{October 13, 2023}
+\parindent 0px
+\begin{document}
+\maketitle
+\section*{Problem 1.1}
+
+The Fahrenheit temperature scale is defined so that ice melts at
+32F and water boils at 212F.
+
+(a) Derive the formulas for converting from Fahrenheit to Celsius and back.
+(b) What is absolute zero on the Fahrenheit scale?
+
+Actually derive it instead of reiterating stated facts.
+
+\section*{GPT's Answer to Problem 1.1}
+
+The Fahrenheit temperature scale is defined so that ice melts at \(32^\circ F\) and water boils at \(212^\circ F\).
+
+\subsection*{(a) Deriving Formulas for Temperature Conversion}
+
+Given: 
+\begin{itemize}
+    \item The melting point of ice is \(32^\circ F\) and \(0^\circ C\).
+    \item The boiling point of water is \(212^\circ F\) and \(100^\circ C\).
+\end{itemize}
+
+Let's define two linear functions:
+\begin{equation}
+    C(m) = a \cdot m + b \quad \text{(i)}
+\end{equation}
+where \(C\) is the temperature in Celsius and \(m\) is the temperature in Fahrenheit, and
+\begin{equation}
+    F(c) = p \cdot c + q \quad \text{(ii)}
+\end{equation}
+where \(F\) is the temperature in Fahrenheit and \(c\) is the temperature in Celsius.
+
+We can find \(a\) and \(b\) (and later \(p\) and \(q\)) by using the two given points in the Celsius and Fahrenheit scales.
+
+1. \(C(32) = 0\) leads to:
+\begin{equation}
+    0 = 32a + b \quad \text{(iii)}
+\end{equation}
+
+2. \(C(212) = 100\) leads to:
+\begin{equation}
+    100 = 212a + b \quad \text{(iv)}
+\end{equation}
+
+To find the value of \(a\) we subtract equation (iii) from (iv):
+\begin{align*}
+    100 - 0 &= 212a - 32a \\
+    100 &= 180a \\
+    a &= \frac{100}{180} = \frac{5}{9}
+\end{align*}
+
+Now we find \(b\) using equation (iii) and the value of \(a\):
+\begin{align*}
+    0 &= 32a + b \\
+    b &= -32a \\
+    b &= -32 \times \frac{5}{9}
+\end{align*}
+
+So, 
+\begin{equation}
+    C(m) = \frac{5}{9}m - \frac{160}{9} \quad \text{(v)}
+\end{equation}
+
+Now for the Fahrenheit formula in terms of Celsius, using similar steps, we derive:
+\begin{equation}
+    F(c) = \frac{9}{5}c + 32 \quad \text{(vi)}
+\end{equation}
+
+\subsection*{(b) Absolute Zero on the Fahrenheit Scale}
+
+Absolute zero is the lowest possible temperature where nothing could be colder and no heat energy remains in a substance. It is defined as \(-273.15^\circ C\) in the Celsius scale.
+
+To find absolute zero on the Fahrenheit scale, we use equation (vi):
+\begin{align*}
+    F(-273.15) &= \frac{9}{5} \times (-273.15) + 32 \\
+    F(-273.15) &= -491.67
+\end{align*}
+
+So, absolute zero is \(-491.67^\circ F\) on the Fahrenheit scale.
+
+\subsection*{Comments}
+
+GPT4 gives the correct answers and explanations.
+
+\section*{Problem 1.2}
+
+The Rankine temperature scale (abbreviated $^\circ R$) uses the same
+size degrees as Fahrenheit, but measured up from absolute zero like kelvin (so
+Rankine is to Fahrenheit as kelvin is to Celsius). Find the conversion formula
+between Rankine and Fahrenheit, and also between Rankine and kelvin. What is
+room temperature on the Rankine scale? Actually derive it instead of reiterating stated facts.
+
+\section*{GPT's Answer to Problem 1.1}
+
+
+The Rankine temperature scale (denoted as $^\circ R$) uses the same size degrees as Fahrenheit, but measured up from absolute zero like Kelvin (so Rankine is to Fahrenheit as Kelvin is to Celsius).
+
+\subsection*{Conversion between Rankine and Fahrenheit}
+
+We know that:
+\begin{itemize}
+    \item Absolute zero is $-491.67^\circ F$.
+\end{itemize}
+
+Given that both Fahrenheit and Rankine use the same interval size, the conversion formula from Fahrenheit (F) to Rankine (R) is found by adjusting the zero point from the Fahrenheit scale to absolute zero.
+
+\begin{equation}
+    R = F + 491.67 \quad \text{(i)}
+\end{equation}
+
+And conversely:
+\begin{equation}
+    F = R - 491.67 \quad \text{(ii)}
+\end{equation}
+
+\subsection*{Conversion between Rankine and Kelvin}
+
+Now let's determine the conversion between the Kelvin (K) and Rankine (R) scales.
+
+\begin{itemize}
+    \item Absolute zero is $0K$ and also $0^\circ R$.
+    \item The boiling point of water is $373.15K$ and $671.67^\circ R$ (using the conversion from Celsius to Kelvin and Fahrenheit to Rankine).
+\end{itemize}
+
+Let's define:
+\begin{equation}
+    K = m \cdot R + n \quad \text{(iii)}
+\end{equation}
+where K is the temperature in Kelvin and R is the temperature in Rankine, and m and n are constants to be determined.
+
+Using the two points above, we can form two simultaneous equations:
+\begin{enumerate}
+    \item \(K(0) = 0\) implies:
+    \begin{equation}
+        0 = m \cdot 0 + n \implies n = 0 \quad \text{(iv)}
+    \end{equation}
+    \item \(K(671.67) = 373.15\) implies:
+    \begin{equation}
+        373.15 = 671.67 \cdot m + n \quad \text{(v)}
+    \end{equation}
+\end{enumerate}
+
+Solving these two equations gives:
+\[ m = \frac{373.15}{671.67} \]
+
+So,
+\begin{equation}
+    K = \frac{373.15}{671.67} \cdot R \quad \text{(vi)}
+\end{equation}
+
+\subsection*{Room Temperature on the Rankine Scale}
+
+Typically, room temperature is around $20^\circ C$ or $68^\circ F$.
+
+Using the conversion from Fahrenheit to Rankine (equation i):
+\[ R = 68 + 491.67 \]
+\[ R = 559.67^\circ R \]
+
+\subsection*{Comments}
+
+GPT4 gives the correct answers and explanations. However, it chooses unwieldy number as the slope for Rankine to Kelvin equation. Upon reiteration which asks to simplify the formula, it does give the more well known form: $$K = \frac{5}{9}R$$.
+
+\end{document}
