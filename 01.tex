@@ -1,5 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{siunitx} % Recommended for units handling
 \pagestyle{empty}
 \title{Chapter 1 - Energy in Thermal Physics}
 \date{October 13, 2023}
@@ -356,5 +358,44 @@ For instance, metal feels colder than wood at the same temperature because metal
 These insights demonstrate that our sensory system doesn't gauge actual temperature—instead, it interprets heat flow, a perception influenced by material properties, contact area, and individual physiological differences. Hence, we cannot accurately assess an object's true temperature by how hot or cold it feels to our touch.
 
 \subsection*{Comments}
+
+GPT4 gives the correct answers and explanations. However, the explanation could have been more clarified by giving more examples that explain the influence of different factors such as contact area. 
+
+\section*{Problem 1.7}
+
+When the temperature of liquid mercury increases by one degree Celsius (or one kelvin), its volume increases by one part in 5500 . The fractional increase in volume per unit change in temperature (when the pressure is held fixed) is called the thermal expansion coefficient, $\beta$ :
+$$
+\beta \equiv \frac{\Delta V / V}{\Delta T}
+$$
+(where $V$ is volume, $T$ is temperature, and $\Delta$ signifies a change, which in this case should really be infinitesimal if $\beta$ is to be well defined). So for mercury, $\beta=1 / 5500 \mathrm{~K}^{-1}=1.81 \times 10^{-4} \mathrm{~K}^{-1}$. (The exact value varies with temperature, but between $0^{\circ} \mathrm{C}$ and $200^{\circ} \mathrm{C}$ the variation is less than $1 \%$.)
+
+(a) Get a mercury thermometer, estimate the size of the bulb at the bottom, and then estimate what the inside diameter of the tube has to be in order for the thermometer to work as required. Assume that the thermal expansion of the glass is negligible.
+
+(b) The thermal expansion coefficient of water varies significantly with temperature: It is $7.5 \times 10^{-4} \mathrm{~K}^{-1}$ at $100^{\circ} \mathrm{C}$, but decreases as the temperature is lowered until it becomes zero at $4^{\circ} \mathrm{C}$. Below $4^{\circ} \mathrm{C}$ it is slightly negative, reaching a value of $-0.68 \times 10^{-4} \mathrm{~K}^{-1}$ at $0^{\circ} \mathrm{C}$. (This behavior is related to the fact that ice is less dense than water.) With this behavior in mind, imagine the process of a lake freezing over, and discuss in some detail how this process would be different if the thermal expansion coefficient of water were always positive.
+
+\section*{GPT's Answer to Problem 1.7}
+
+\noindent (a) The question involves determining the necessary inner diameter of the capillary tube in a mercury thermometer, given that the thermal expansion of mercury is the primary factor affecting the thermometer's readings. Assuming the bulb of a typical thermometer holds about 0.5 ml (or 0.5 cubic centimeters) of mercury — an estimated average — we can use the given thermal expansion coefficient of mercury to find out how much the volume of mercury expands per degree Celsius and then determine the necessary diameter of the tube.
+
+For mercury, $\beta = \frac{1}{5500}$ per K (or per $\degree$C). If the volume of the mercury in the bulb is 0.5 cc, then for each degree Celsius increase in temperature, the volume of the mercury will increase by $(0.5 \, \text{cc}) \times (\frac{1}{5500}) = 9.09 \times 10^{-5} \, \text{cc}$.
+
+This additional volume of mercury must rise into the capillary tube of the thermometer. The capillary tube is essentially a cylindrical shape, and the volume of a cylinder is given by $V = \pi r^2 h$, where $r$ is the radius and $h$ is the height (which will correspond to the increased length that the mercury column rises per degree Celsius, which is how we read the temperature).
+
+If we want the thermometer to register a 1$\degree$C change for every millimeter that the mercury rises (which is a typical scale), the change in height ($h$) will be 1 mm = 0.1 cm. Therefore, we can solve for the radius ($r$) of the tube using the volume formula:
+
+\[
+9.09 \times 10^{-5} \, \text{cc} = \pi r^2 \times 0.1 \, \text{cm}
+\]
+
+Solving for $r$, we get approximately $r \approx 0.0054 \, \text{cm}$ or $0.054 \, \text{mm}$. Therefore, the inner diameter of the tube should be approximately twice this, or about $0.11 \, \text{mm}$. \\
+
+\noindent (b) The unique property of water is that its density increases as it cools from $100\degree\mathrm{C}$ to $4\degree\mathrm{C}$, but below $4\degree\mathrm{C}$, it expands (its density decreases) until it freezes. This is due to the molecular structure of ice, which forms a hexagonal lattice that occupies more space than liquid water. Because of this, ice floats on water, and lakes freeze from the top down.
+
+If the thermal expansion coefficient of water were always positive (meaning that water continued to contract upon cooling), water would become denser as it cooled, all the way until it freezes. In this scenario, colder water would always sink to the bottom, and lakes would freeze from the bottom up.
+
+This would have profound ecological implications. Aquatic life relies on the bottom layer of the lake remaining liquid and warmer during the winter, a result of ice's insulating properties when it floats on the surface. If lakes froze from the bottom up, many aquatic species might not survive the cold temperatures.
+
+Additionally, if ice didn't float, it would continue to accumulate at the bottom of bodies of water, potentially never melting entirely in some areas and leading to a "runaway" freezing effect, drastically lowering the water levels and making it much more difficult for temperatures to rise enough to melt the ice during warmer seasons. This phenomenon could have significantly altered the climate, geography, and biological makeup of the Earth's aquatic systems.
+
 
 \end{document}
