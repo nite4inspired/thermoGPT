@@ -477,7 +477,7 @@ GPT4 gives the correct answers and explanations.
 
 \textbf{Problem 1.9.} What is the volume of one mole of air, at room temperature and 1 atm pressure?
 
-\subsection*{Solution}
+\subsection*{GPT's Answer to Problem 1.9}
 
 To find the volume of one mole of air at room temperature and 1 atm pressure, we use the ideal gas law:
 \[
@@ -504,6 +504,52 @@ V \approx \SI{0.024}{\meter\cubed} \, \text{or} \, \SI{24}{\liter}
 \]
 
 So, the volume of one mole of air at room temperature and \(1\) atm pressure is approximately \(\SI{24}{\liter}\).
+
+\subsection*{Comments}
+
+GPT4 gives the correct answers and explanations.
+
+\section*{Problem 1.10}
+
+\textbf{Problem 1.10.} Estimate the number of air molecules in an average-sized room.
+
+\subsection*{GPT's Answer to Problem 1.10}
+
+To estimate the number of air molecules in an average-sized room, we need to know the volume of the room and the conditions of the air in the room (temperature and pressure). We then use the ideal gas law to find the number of moles of air, and finally, we calculate the number of molecules. 
+
+Let's assume the room is \(\SI{10}{\meter}\) x \(\SI{10}{\meter}\) x \(\SI{2.5}{\meter}\) (which gives \(\SI{250}{\meter\cubed}\) or \(\SI{250000}{\liter}\)), the temperature is room temperature (\(\SI{25}{\degreeCelsius}\) or \(298\) K), and the pressure is \(1\) atm (\(\SI{101325}{\pascal}\)).
+
+The ideal gas law is:
+\[
+PV = nRT
+\]
+where \(P\) is the pressure, \(V\) is the volume, \(n\) is the number of moles, \(R\) is the universal gas constant (\(\SI{8.31}{\joule\per\mole\per\kelvin}\)), and \(T\) is the temperature in kelvins.
+
+Solving for \(n\) (the number of moles) gives:
+\[
+n = \frac{PV}{RT}
+\]
+
+Substituting in the known values gives:
+\[
+n = \frac{(\SI{101325}{\pascal})(\SI{250}{\meter\cubed})}{(\SI{8.31}{\joule\per\mole\per\kelvin})(298 \, \text{K})}
+\]
+\[
+n \approx \SI{10156}{\mole}
+\]
+
+Since each mole of air contains Avogadro's number (\(N_A \approx \SI{6.02e23}{\per\mole}\)) of molecules, the total number of molecules (\(N\)) is:
+\[
+N = n \cdot N_A
+\]
+\[
+N \approx \SI{10156}{\mole} \cdot \SI{6.02e23}{\per\mole}
+\]
+\[
+N \approx \SI{6.11e28}{molecules}
+\]
+
+So, there are approximately \(\SI{6.11e28}{molecules}\) of air in an average-sized room.
 
 
 \end{document}
