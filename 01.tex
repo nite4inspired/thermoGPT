@@ -575,5 +575,42 @@ Now, since \(PV = nRT\), and \(P\), \(V\), and \(R\) are constants under these c
 
 Therefore, under the assumption of constant pressure and equal volumes, Room B, which is cooler, contains the greater mass of air.
 
+\section*{Problem 1.12}
+
+\textbf{Problem 1.12.} Calculate the average volume per molecule for an ideal gas at room temperature and atmospheric pressure. Then take the cube root to get an estimate of the average distance between molecules. How does this distance compare to the size of a small molecule like N2 or H2O?
+
+\subsection*{GPT's Answer to Problem 1.12}
+
+The ideal gas law is given by:
+
+\[
+PV = NkT
+\]
+
+where \(P\) is the pressure, \(V\) is the volume, \(N\) is the number of molecules, \(k\) is the Boltzmann constant, and \(T\) is the temperature.
+
+We're interested in finding the average volume per molecule, \(V_{\text{avg}}\), at room temperature and atmospheric pressure. To find \(V_{\text{avg}}\), we rearrange the ideal gas law to solve for \(V/N\), which gives us \(V_{\text{avg}} = \frac{kT}{P}\).
+
+Given: 
+\begin{align*}
+P & = 1 \, \text{atm} = 1.013 \times 10^5 \, \text{Pa} \\
+T & = \text{room temperature} \approx 298 \, \text{K} \\
+k & = 1.381 \times 10^{-23} \, \text{J/K}
+\end{align*}
+
+We find:
+
+\[
+V_{\text{avg}} = \frac{(1.381 \times 10^{-23} \, \text{J/K})(298 \, \text{K})}{1.013 \times 10^5 \, \text{Pa}} \approx 4.07 \times 10^{-26} \, \text{m}^3
+\]
+
+The average distance between molecules, \(d\), is the cube root of \(V_{\text{avg}}\):
+
+\[
+d = \sqrt[3]{V_{\text{avg}}} \approx \sqrt[3]{4.07 \times 10^{-26}} \, \text{m}^3 \approx 3.44 \times 10^{-9} \, \text{m} = 3.44 \, \text{nm}
+\]
+
+Typical sizes of small molecules like N2 or H2O are on the order of a tenth of a nanometer (about 0.1 nm), so the average distance between gas molecules is roughly 30 times the size of a small molecule. This significant distance relative to their size is what allows us to treat them as point particles in an ideal gas, ignoring intermolecular forces and volume occupied by the gas molecules themselves.
+
 
 \end{document}
