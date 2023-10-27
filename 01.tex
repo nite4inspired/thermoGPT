@@ -768,5 +768,64 @@ Substituting the known values:
 Thus, the average temperature of the air inside the hot-air balloon is approximately \( 313.12 \, \text{K} \), or \( 40.12^\circ C \).
 
 
-This new answer is correct in terms of the logic. The final expression for Temperature is good, but GPT4 gets the actual calculation wrong. The answer is 355.8 K. 
+This new answer is correct in terms of the logic. The final expression for Temperature is good, but GPT4 gets the actual calculation wrong. The answer is 355.8 K. The main problem that GPT4 displayed here was that when given insufficient information to solve the question, instead of saying that it cannot solve the question due to lack of information, it starts to use incorrect knowledge to force an answer. It also displayed errors in calculation. 
+
+\section*{Problem 1.16}
+
+(a) Consider a horizontal slab of air whose thickness (height) is \( dz \). If this slab is at rest, the pressure holding it up from below must balance both the pressure from above and the weight of the slab. Use this fact to find an expression for \( \frac{dP}{dz} \), the variation of pressure with altitude, in terms of the density of air.
+
+(b) Use the ideal gas law to write the density of air in terms of pressure, temperature, and the average mass \( m \) of the air molecules. Show, then, that the pressure obeys the differential equation
+\[
+\frac{dP}{dz}=-\frac{mg}{kT}P
+\]
+called the barometric equation.
+
+(c) Assuming that the temperature of the atmosphere is independent of height, solve the barometric equation to obtain the pressure as a function of height: 
+\[
+P(z) = P(0)e^{-mgz/kT}
+\]
+Show also that the density obeys a similar equation.
+
+(d) Estimate the pressure, in atmospheres, at the following locations.
+
+\section*{GPT's Answer to 1.16:}
+
+(a) For the horizontal slab of air at pressure \( P \) and \( P + dP \) from below and above respectively:
+\[
+\frac{dP}{dz} = -\rho g
+\]
+
+(b) Using the ideal gas law:
+\[
+PV = nRT \implies \rho = \frac{mP}{RT}
+\]
+Substituting this expression in (a):
+\[
+\frac{dP}{dz} = -\frac{mgP}{RT}
+\]
+This is the barometric equation.
+
+(c) Solving the above differential equation:
+\[
+\frac{dP}{P} = -\frac{mg}{RT}dz
+\]
+Integrating both sides:
+\[
+\ln(P) = -\frac{mgz}{RT} + C
+\]
+Where \( C \) is an integration constant. At \( z = 0 \), \( P = P(0) \):
+\[
+P(z) = P(0)e^{-mgz/kT}
+\]
+Similarly, the density follows an analogous expression.
+
+(d) Using given constants and the derived formula:
+For Ogden, Utah:
+\[
+P(1430) = e^{-28.97 \times 10^{-3} \times 9.81 \times 1430/8.31/288} \approx 0.85 \text{ atm}
+\]
+Similarly, for Leadville: \( P \approx 0.7 \text{ atm} \), Mt. Whitney: \( P \approx 0.61 \text{ atm} \), Mt. Everest: \( P \approx 0.33 \text{ atm} \).
+
+\subsection*{Comments}
+
 \end{document}
