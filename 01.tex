@@ -828,4 +828,29 @@ Similarly, for Leadville: \( P \approx 0.7 \text{ atm} \), Mt. Whitney: \( P \ap
 
 \subsection*{Comments}
 
+GPT4 gives the correct answers and explanations. However, the numerical values are slightly off. 
+
+\section*{Problem 1.17.}
+Even at low density, real gases don't quite obey the ideal gas law. A systematic way to account for deviations from ideal behavior is the virial expansion,
+\begin{equation}
+P V = n R T \left(1 + \frac{B(T)}{V/n} + \frac{C(T)}{(V/n)^2} + \cdots \right),
+\end{equation}
+where the functions $B(T)$, $C(T)$, and so on are called the virial coefficients. When the density of the gas is fairly low, so that the volume per mole is large, each term in the series is much smaller than the one before.
+
+\subsection*{GPT's Answer to 1.17}
+
+\textbf{(a)} Using the ideal gas law $PV = nRT$, the volume per mole $\frac{V}{n}$ at atmospheric pressure $P = 1 \text{atm}$ and $R = 0.0821 \text{L.atm/mol.K}$ is:
+\begin{equation}
+\frac{V}{n} = \frac{RT}{P}.
+\end{equation}
+Given the table of $B(T)$ values for different temperatures, one can compute the term $\frac{B(T)}{V/n}$. If the magnitude of $\frac{B(T)}{V/n}$ is much less than 1, then the ideal gas law is a good approximation.
+
+\textbf{(b)} At low temperatures, gas molecules move slower and have stronger intermolecular attractions, leading to a negative $B(T)$. At high temperatures, the molecules move faster, resulting in dominant repulsive forces and a positive $B(T)$.
+
+\textbf{(c)} To derive the virial coefficients from the van der Waals equation, expand the equation in terms of powers of $1/V$ and match the coefficients with those of the virial expansion. The binomial expansion can be applied to the term $\left[1-\frac{nb}{V}\right]^{-1}$.
+
+\textbf{(d)} To plot the graph of $B(T)$ using the van der Waals equation, one needs to adjust the constants $a$ and $b$ to fit the given data for nitrogen. Then, by comparing the van der Waals prediction with the actual values, the accuracy of the equation can be assessed.
+
+\subsection*{Comments}
+
 \end{document}
