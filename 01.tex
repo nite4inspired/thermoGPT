@@ -8,7 +8,7 @@
 \date{October 13, 2023}
 \parindent 0px
 \usepackage{parskip}
-\setlength{\parskip}{1cm}
+\setlength{\parskip}{1em}
 
 \author{Ryan}
 
@@ -726,4 +726,47 @@ For the hot air balloon to become airborne, or even just to float in equilibrium
 
 However, if the assumption is not clear or seems unfounded in the context of the problem statement, we can explore the question from a different angle. Let me know how you'd like to proceed.
 
+\subsection*{Mistake}
+
+However, the weight of the cool air that is displaced is greater than 4905N. Let's say that the weight of the hot air is x Newtons. Then, the weight of the cool air is 4905 + x Newtons. Please redo the question with this new logic. 
+
+GPT4 gave a nonsense answer that led to it making contradictory statement like the following: 4905 + x = 4905 + x + x, and x = 4905.
+
+\subsection*{Mistake 2}
+
+This is wrong. You have to start with the fact that the volume of the balloon gets to a place where the radius = 8m. From there, you calculate the mass of the displaced air. Then, calculate the mass of the hot air by subtracting the mass of the displaced air by 500kg. Then, use the mass of the hot air to calculate the temperature. All these steps can be done with PV = nRT, assuming molar mass of air is 28.97g/mol. 
+
+After being confronted with a mistake, GPT responded with this:
+
+\begin{enumerate}
+    \item Volume of the balloon, \( V = \frac{4}{3} \pi (8^3) = 2144.66 \, \text{m}^3 \) (Using radius \( r = 8 \, \text{m} \))
+    \item Weight of the unfilled balloon and payload, \( W_{\text{payload}} = 500 \times 9.81 = 4905 \, \text{N} \)
+    \item Density of air under standard conditions \( \rho = 1.225 \, \text{kg/m}^3 \)
+    \item Ideal Gas Constant, \( R = 8.3145 \, \text{J/mol·K} \)
+    \item Molar mass of air \( M = 28.97 \times 10^{-3} \, \text{kg/mol} \)
+\end{enumerate}
+
+\textbf{Mass of Displaced Air}:
+\[ m_{\text{displaced}} = \rho \times V = 1.225 \times 2144.66 = 2627.71 \, \text{kg} \]
+
+\textbf{Mass of Hot Air}:
+Given that the upward force due to the displaced air must counteract the combined weight of the balloon and the hot air inside:
+\[ m_{\text{hot air}} = m_{\text{displaced}} - 500 = 2127.71 \, \text{kg} \]
+
+\textbf{To Find the Average Temperature}:
+Using the Ideal Gas Law in the form \( PV = nRT \), where \( n = \frac{m_{\text{hot air}}}{M} \):
+
+Given atmospheric pressure \( P = 1 \, \text{atm} = 101325 \, \text{Pa} \) and rearranging for \( T \):
+
+\[ T = \frac{PV \times M}{R \times m_{\text{hot air}}} \]
+
+Substituting the known values:
+
+\[ T = \frac{101325 \times 2144.66 \times 28.97 \times 10^{-3}}{8.3145 \times 2127.71} \]
+\[ T \approx 313.12 \, \text{K} \]
+
+Thus, the average temperature of the air inside the hot-air balloon is approximately \( 313.12 \, \text{K} \), or \( 40.12^\circ C \).
+
+
+This new answer is correct in terms of the logic. The final expression for Temperature is good, but GPT4 gets the actual calculation wrong. The answer is 355.8 K. 
 \end{document}
