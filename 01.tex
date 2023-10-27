@@ -681,4 +681,32 @@ So, the mass of one mole of dry air is approximately $28.84$ grams.
 
 GPT4 gives the correct answers and explanations.
 
+\section*{Problem 1.15}
+Estimate the average temperature of the air inside a hot-air balloon. Assume that the total mass of the unfilled balloon and payload is 500 kg. What is the mass of the air inside the balloon?
+
+\section*{GPT's Answer to 1.15}
+First, let's calculate the weight of the unfilled balloon and payload:
+\[ W = 500 \, \text{kg} \times 9.81 \, \text{m/s}^2 = 4905 \, \text{N} \]
+
+Now, the weight of the displaced air is also \( W = 4905 \, \text{N} \). Given that the density of air at room temperature is about \(1.2 \, \text{kg/m}^3\), the volume \( V \) of the displaced air (which will be roughly the volume of the hot air inside the balloon) can be given by:
+\[ W = \rho \times V \times g \]
+\[ V = \frac{W}{\rho \times g} \]
+Substituting the given values:
+\[ V \approx \frac{4905 \, \text{N}}{1.2 \, \text{kg/m}^3 \times 9.81 \, \text{m/s}^2} = 416.7 \, \text{m}^3 \]
+
+Now, the mass of the hot air inside the balloon can be found by using the fact that its density is lesser than the density of the surrounding air. If \( \rho_{\text{hot}} \) is the density of the hot air and \( \rho \) is the density of the surrounding air, and \( T_{\text{hot}} \) is the temperature of the hot air, then:
+\[ \frac{\rho_{\text{hot}}}{\rho} = \frac{T}{T_{\text{hot}}} \]
+From which, \( \rho_{\text{hot}} = \rho \times \frac{T}{T_{\text{hot}}} \)
+
+Now, using the weight and volume relationships:
+\[ W = \rho_{\text{hot}} \times V \times g \]
+\[ W = \rho \times \frac{T}{T_{\text{hot}}} \times V \times g \]
+Given that \( W \) is 4905 N and rearranging for \( T_{\text{hot}} \):
+\[ T_{\text{hot}} = \rho \times T \times V \times g / W \]
+Substituting the given values and \( T \) as 293 K:
+\[ T_{\text{hot}} \approx \frac{1.2 \, \text{kg/m}^3 \times 293 \, \text{K} \times 416.7 \, \text{m}^3 \times 9.81 \, \text{m/s}^2}{4905 \, \text{N}} = 293 \, \text{K} \times 1.17 \]
+
+This yields a \( T_{\text{hot}} \) value greater than 293 K, showing that the air inside the balloon is warmer than the surrounding. The exact temperature would require more specific information or more detailed assumptions about the properties of the balloon and the conditions of the environment.
+
+
 \end{document}
